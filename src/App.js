@@ -1,6 +1,6 @@
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { switchMode, switchModeManualOff, switchModeManualOn } from './redux/actions/switchModeActions';
+import { switchModeManualOff, switchModeManualOn } from './redux/actions/switchModeActions';
 import './styles/dayStyles/dayStyles.css';
 import './styles/nightStyles/nightStyles.css';
 import ModernLigthSwitch from './components/switches/modernLight/modernLightSwitch';
