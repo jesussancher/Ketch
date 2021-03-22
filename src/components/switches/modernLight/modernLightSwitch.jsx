@@ -6,29 +6,10 @@ export default function ModernLigthSwitch (props) {
     const classNames = require('classnames');
     const { toggle, mode } = props;
 
-    const [style, setStyle] = useState({ 
+    const style = { 
         height: props.height,
         width: props.width,
-    });
-
-    // useEffect(() => {
-    //     if(props.height > 0) {
-    //         const newWidth = parseInt(props.height,10) * 0.8;
-    //         setStyle({...style, width: newWidth});
-    //     } else {
-    //         return
-    //     }
-
-    //     console.log(parseInt(props.width, 10))
-    //     if(props.width > 0) {
-    //         const newHeight = parseInt(props.width, 10) * 1.25;
-    //         console.log(newHeight)
-    //         setStyle({...style, height: newHeight});
-    //     } else {
-    //         return
-    //     }
-    // },[props, mode])
-
+    };
 
     const toggleOn = () => {
         toggle(false)
