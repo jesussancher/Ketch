@@ -1,0 +1,14 @@
+:root {
+    --main-background-day: #f4f4f4;
+}
+
+.body__day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-background-day);
+    height: 100vh;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}

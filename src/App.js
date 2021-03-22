@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { switchMode, switchModeManualOff, switchModeManualOn } from './redux/actions/switchModeActions';
+import './styles/dayStyles/dayStyles.css';
+import './styles/nightStyles/nightStyles.css';
+import ModernLigthSwitch from './components/switches/modernLight/modernLightSwitch';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const classNames = require('classnames');
+    const dispatch = useDispatch();
+    const { nightMode } =  useSelector(state => state.switchNight);
+
+    const switchModeFn = (state) => {
+      if(state) {
+        dispatch(switchModeManualOn())
+      } else {
+        dispatch(switchModeManualOff())
+      }
+    }
+    return (
+        <div className={classNames('body__day', {'body__night' : nightMode})}>
+          <ModernLigthSwitch toggle={switchModeFn} mode={nightMode}/>
+        </div>
+    );
 }
 
 export default App;

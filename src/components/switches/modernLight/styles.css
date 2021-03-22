@@ -1,0 +1,133 @@
+/* Modern Ligth Switch  */
+
+:root {
+    --mls-background: rgb(15, 15, 15);
+    --mls-switch-background: #000;
+    --mls-switch-state-active: rgb(8, 8, 8);
+    --mls-switch-light-border: rgb(61, 61, 61);
+    --mls-switch-light-active: rgb(4, 175, 255);
+    --mls-switch-light-active-transparent: rgba(4, 176, 255, 0.096);
+    --mls-switch-light-inactive: rgb(255, 42, 4);
+
+}
+
+/* Base */
+.mls-container{
+    height: 150px;
+    width: 120px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Switch */
+
+.mls-state-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.mls-state-container:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background-color: var(--mls-background);
+}
+
+/* State */
+.mls-state {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--mls-switch-state-active); */
+}
+.mls-state.inactive-on{
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(var(--mls-background) 30%, var(--mls-switch-state-active));
+}
+
+.mls-state.inactive-off{
+    background: linear-gradient(var(--mls-switch-state-active) 30%, var(--mls-background));
+    border-radius: 0 0 5px 5px;
+}
+
+/* .mls-state.inactive-on:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    background-color: var(--mls-switch-light-border);
+    border-radius: 5px 5px 0 0;
+}
+
+.mls-state.inactive-off:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--mls-switch-light-border);
+    border-radius: 0 0 5px 5px;
+} */
+
+.mls-state.active-on::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(var(--mls-switch-light-active-transparent) 0%, var(--mls-switch-state-active), transparent 90%);
+    border-radius: 5px 5px 0 0;
+    z-index: 100;
+}
+
+.mls-state.active-off::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(var(--mls-switch-light-active-transparent) 0%, var(--mls-switch-state-active), transparent 90%);
+    border-radius:0 0 5px 5px;
+    z-index: 100;
+}
+
+/* State Title */
+.mls-state-title {
+    color: var(--mls-switch-light-inactive);
+    z-index: 150;
+}
+
+.mls-state-title.active {
+    color: var(--mls-switch-light-active);
+    text-shadow: 0px 0px 10px #2588CE;
+}
+
+
+
+/* Color */
+
+.mls-container.off, .mls-container.on{
+    /* background-color: var(--mls-background); */
+}
+
+.mls-state-container.off,.mls-state-container.on {
+    background-color: var(--mls-switch-background);
+}

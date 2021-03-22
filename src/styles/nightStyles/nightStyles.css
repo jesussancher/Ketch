@@ -1,0 +1,12 @@
+:root {
+    --main-background-night: #212934;
+}
+
+
+.body__night {
+    background-color: var(--main-background-night);
+    height: 100vh;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
