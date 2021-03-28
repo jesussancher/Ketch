@@ -1,7 +1,7 @@
 import './App.css';
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import ModernLigthSwitch from './components/switches/modernLight/modernLightSwitch';
-import React, {Fragment, useEffect, useState} from 'react';
+import React, {Fragment} from 'react';
 import {useSelector} from 'react-redux';
 import BottleHeader from './components/headers/bottle/bottleHeader';
 

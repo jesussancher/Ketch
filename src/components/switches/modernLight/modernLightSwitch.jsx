@@ -10,7 +10,7 @@ export default function ModernLigthSwitch (props) {
     const classNames = require('classnames');
     const dispatch = useDispatch();
 
-    const { toggle, mode } = props;
+    const { mode } = props;
 
     const switchModeFn = (state) => {
         if (state) {
@@ -34,11 +34,6 @@ export default function ModernLigthSwitch (props) {
         switchModeFn(true)
         localStorage.setItem('lightMode', true)
     }
-
-    useEffect(() => {
-        console.log(!localStorage.getItem('lightMode') ? "Encendido" : "Apagado")
-        switchModeFn(localStorage.getItem('lightMode'))
-    },[])
 
     return (
         <Fragment>
