@@ -1,0 +1,8 @@
+.header-container {
+    width: 1000px;
+    height: calc(1000px / 3);
+}
+
+.debug {
+    border: 1px solid red
+}

@@ -1,0 +1,435 @@
+.background {
+    background-color: rgb(255, 152, 17);
+    position: relative;
+}
+
+.table-background {
+    position: relative;
+    margin: auto;
+    top: 30%;
+    background-color: rgba(26, 25, 25, 0.89);
+    height: 40%;
+    width: 200px;
+    z-index: 150;
+    border-radius: 5px;
+}
+
+.table-base {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: rgba(24, 24, 24, 0.555);
+    z-index: 100;
+}
+
+.table-base.upleft {
+    top: 10px;
+    left: 10px;
+}
+
+.table-base.upright {
+    top: 10px;
+    right: 10px;
+}
+
+.table-base.downleft {
+    bottom: 10px;
+    left: 10px;
+}
+
+.table-base.downright {
+    bottom: 10px;
+    right: 10px;
+}
+
+.card {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    z-index: 120;
+}
+
+.card-flipped {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    z-index: 120;
+}
+
+.card.base {
+    top: 42%;
+    left: 25%;
+}
+
+.card-flipped.base {
+    top: 42%;
+    left: 27%;
+    margin-left: 2px;
+}
+
+.card-flipped.diamond-a:after {
+    position: absolute;
+    clip-path: polygon(50% 0%, 87% 50%, 50% 100%, 13% 49%);
+    top: 10%;
+    left: 10%;
+    content: "";
+    height: 30%;
+    width: 40%;
+    border-radius: 2px;
+    background-color: rgb(204, 24, 24);
+}
+
+.card-flipped.diamond-a:before {
+    position: absolute;
+    clip-path: polygon(50% 0%, 87% 50%, 50% 100%, 13% 49%);
+    bottom: 10%;
+    right: 10%;
+    content: "";
+    height: 30%;
+    width: 40%;
+    border-radius: 2px;
+    background-color: rgb(204, 24, 24);
+}
+
+.card-flipped .diamond-b-1 {
+    position: absolute;
+    clip-path: polygon(50% 0%, 87% 50%, 50% 100%, 13% 49%);
+    top: 10%;
+    left: 10%;
+    height: 30%;
+    width: 40%;
+    border-radius: 2px;
+    background-color: rgb(17, 1, 1);
+}
+.card-flipped .diamond-b-2 {
+    position: absolute;
+    clip-path: polygon(50% 0%, 87% 50%, 50% 100%, 13% 49%);
+    top: 10%;
+    right: 10%;
+    height: 30%;
+    width: 40%;
+    border-radius: 2px;
+    background-color: rgb(17, 1, 1);
+}
+
+.card-flipped .diamond-b-3 {
+    position: absolute;
+    clip-path: polygon(50% 0%, 87% 50%, 50% 100%, 13% 49%);
+    bottom: 10%;
+    left: 10%;
+    height: 30%;
+    width: 40%;
+    border-radius: 2px;
+    background-color: rgb(17, 1, 1);
+}
+.card-flipped .diamond-b-4 {
+    position: absolute;
+    clip-path: polygon(50% 0%, 87% 50%, 50% 100%, 13% 49%);
+    bottom: 10%;
+    right: 10%;
+    height: 30%;
+    width: 40%;
+    border-radius: 2px;
+    background-color: rgb(17, 1, 1);
+}
+
+.card-flipped .diamond-b-5 {
+    position: absolute;
+    clip-path: polygon(50% 0%, 87% 50%, 50% 100%, 13% 49%);
+    bottom: 35%;
+    right: 30%;
+    height: 30%;
+    width: 40%;
+    border-radius: 2px;
+    background-color: rgb(17, 1, 1);
+}
+
+
+.card-flipped .heart-a {
+    position: relative;
+    top: 10%;
+    left: 10%;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: rgb(204, 24, 24);
+}
+
+.card-flipped .heart-a::before {
+    position: absolute;
+    top: 0%;
+    left: 60%;
+    content: "";
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: rgb(204, 24, 24);
+}
+
+.card-flipped .heart-a::after {
+    position: absolute;
+    top: 40%;
+    left: -20%;
+    content: "";
+    height: 0px;
+    width: 0px;
+    border-radius: 100%;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid rgb(204, 24, 24);
+}
+
+
+.card-flipped .heart-b {
+    position: relative;
+    top: -3%;
+    left: 58%;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: rgb(204, 24, 24);
+}
+
+.card-flipped .heart-b::before {
+    position: absolute;
+    top: 0%;
+    left: 60%;
+    content: "";
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: rgb(204, 24, 24);
+}
+
+.card-flipped .heart-b::after {
+    position: absolute;
+    top: 40%;
+    left: -20%;
+    content: "";
+    height: 0px;
+    width: 0px;
+    border-radius: 100%;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid rgb(204, 24, 24);
+}
+
+.card-flipped .heart-c {
+    position: relative;
+    top: 53%;
+    left: 69%;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: rgb(204, 24, 24);
+    transform: rotate(180deg);
+}
+
+.card-flipped .heart-c::before {
+    position: absolute;
+    top: 0%;
+    left: 60%;
+    content: "";
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: rgb(204, 24, 24);
+}
+
+.card-flipped .heart-c::after {
+    position: absolute;
+    top: 40%;
+    left: -20%;
+    content: "";
+    height: 0px;
+    width: 0px;
+    border-radius: 100%;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid rgb(204, 24, 24);
+}
+
+.card-flipped .heart-d {
+    position: relative;
+    top: 40%;
+    left: 22%;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: rgb(204, 24, 24);
+    transform: rotate(180deg);
+}
+
+.card-flipped .heart-d::before {
+    position: absolute;
+    top: 0%;
+    left: 60%;
+    content: "";
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: rgb(204, 24, 24);
+}
+
+.card-flipped .heart-d::after {
+    position: absolute;
+    top: 40%;
+    left: -20%;
+    content: "";
+    height: 0px;
+    width: 0px;
+    border-radius: 100%;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid rgb(204, 24, 24);
+}
+
+
+.card-flipped .picas-body {
+    position: relative;
+    top: 38%;
+    left: 44%;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: rgb(17, 1, 1);
+    transform: rotate(180deg);
+}
+
+.card-flipped .picas-body::before {
+    position: absolute;
+    top: 0%;
+    left: 60%;
+    content: "";
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: rgb(17, 1, 1);
+}
+
+.card-flipped .picas-body::after {
+    position: absolute;
+    top: 60%;
+    left: -3%;
+    content: "";
+    height: 0px;
+    width: 0px;
+    border-radius: 100%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid rgb(17, 1, 1);
+}
+
+.card-flipped .picas-tail {
+    position: absolute;
+    bottom: 80%;
+    left: 30%;
+    content: "";
+    height: 0px;
+    width: 0px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid rgb(17, 1, 1);
+}
+
+.card:after {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    content: "";
+    height: 80%;
+    width: 80%;
+    border-radius: 2px;
+    background-color: rgb(204, 24, 24);
+}
+
+.chair-vertical {
+    position: absolute;
+    height: 66px;
+    width: 10px;
+    background-color: rgb(24, 24, 24);
+    border-radius: 5px;
+}
+
+.chair-horizontal {
+    position: absolute;
+    height: 10px;
+    width: 66px;
+    background-color: rgb(24, 24, 24);
+    border-radius: 5px;
+}
+
+.chair-vertical.left {
+    left: 37%;
+    top: 40%;
+}
+
+.chair-vertical.right {
+    right: 36%;
+    top: 40%;
+}
+
+.chair-horizontal.up {
+    left: 47%;
+    top: 21%;
+}
+
+.chair-horizontal.down {
+    right: 50%;
+    bottom: 18%;
+    transform: rotate(25deg);
+}
+
+.chair-base-vertical {
+    position: absolute;
+    height: 90%;
+    width: 45px;
+    border-radius: 5px;
+}
+
+.chair-base-horizontal {
+    position: absolute;
+    height: 45px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.chair-base-vertical.left {
+    left: 10px;
+    top: 5%;
+    background: linear-gradient(90deg, rgb(24, 24, 24) 5%, rgb(43, 43, 43));
+}
+
+.chair-base-vertical.right {
+    right: 10px;
+    top: 5%;
+    background: linear-gradient(270deg, rgb(24, 24, 24) 5%, rgb(43, 43, 43));
+}
+
+.chair-base-horizontal.up {
+    left: 3px;
+    top: 100%;
+    background: linear-gradient(180deg, rgb(24, 24, 24) 5%, rgb(43, 43, 43));
+}
+
+.chair-base-horizontal.down {
+    left: 3px;
+    bottom: 90%;
+    background: linear-gradient(0deg, rgb(24, 24, 24) 5%, rgb(43, 43, 43));
+}
+
+.sign {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: oblique;
+}

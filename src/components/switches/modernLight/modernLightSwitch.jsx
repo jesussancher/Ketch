@@ -1,10 +1,24 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import './styles.css';
+import './../../../styles/dayStyles/dayStyles.css';
+import './../../../styles/nightStyles/nightStyles.css';
+import {useDispatch} from 'react-redux';
+import {switchModeManualOff, switchModeManualOn} from './../../../redux/actions/switchModeActions';
 
 export default function ModernLigthSwitch (props) {
 
     const classNames = require('classnames');
+    const dispatch = useDispatch();
+
     const { toggle, mode } = props;
+
+    const switchModeFn = (state) => {
+        if (state) {
+            dispatch(switchModeManualOn())
+        } else {
+            dispatch(switchModeManualOff())
+        }
+    }
 
     const style = { 
         height: props.height,
@@ -12,12 +26,19 @@ export default function ModernLigthSwitch (props) {
     };
 
     const toggleOn = () => {
-        toggle(false)
+        switchModeFn(false)
+        localStorage.setItem('lightMode', false)
     }
 
     const toggleOff = () => {
-        toggle(true)
+        switchModeFn(true)
+        localStorage.setItem('lightMode', true)
     }
+
+    useEffect(() => {
+        console.log(!localStorage.getItem('lightMode') ? "Encendido" : "Apagado")
+        switchModeFn(localStorage.getItem('lightMode'))
+    },[])
 
     return (
         <Fragment>
