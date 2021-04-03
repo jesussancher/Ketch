@@ -4,6 +4,7 @@ import ModernLigthSwitch from './components/switches/modernLight/modernLightSwit
 import React, {Fragment} from 'react';
 import {useSelector} from 'react-redux';
 import BottleHeader from './components/headers/bottle/bottleHeader';
+import CandaceFlynn from './components/characters/candaceFlynn/candaceFlynn';
 
 // import
 
@@ -22,6 +23,9 @@ function App() {
                         </Route>
                         <Route path="/header">
                             <BottleHeader />
+                        </Route>
+                        <Route path="/character">
+                            <CandaceFlynn />
                         </Route>
                         <Route path="/">
                             {/* <Home/> */}
