@@ -4,15 +4,19 @@ import ModernLigthSwitch from './components/switches/modernLight/modernLightSwit
 import React, {Fragment} from 'react';
 import {useSelector} from 'react-redux';
 import BottleHeader from './components/headers/bottle/bottleHeader';
-import CandaceFlynn from './components/characters/candaceFlynn/candaceFlynn';
-
-// import
+import { characterList } from './components/characters/characterList.js';
 
 function App() {
 
     const classNames = require('classnames');
     const {nightMode} = useSelector(state => state.switchNight);
 
+    const renderCharacter = (routerProps) => {
+        let charName = routerProps.match.params.name;
+        let foundChart = characterList.find( char => char.name === charName);
+        console.log(foundChart)
+        return (foundChart ? foundChart.component : <ModernLigthSwitch />)
+    }
     return (
         <Fragment>
             <div className={classNames('body__day', {'body__night': nightMode})}>
@@ -24,9 +28,7 @@ function App() {
                         <Route path="/header">
                             <BottleHeader />
                         </Route>
-                        <Route path="/character">
-                            <CandaceFlynn />
-                        </Route>
+                        <Route path="/Characters/:name" render={props => renderCharacter(props)} />
                         <Route path="/">
                             {/* <Home/> */}
                         </Route>

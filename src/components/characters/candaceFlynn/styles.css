@@ -45,9 +45,6 @@
     width: 130px;
     height: 80px;
     border-radius: 100% 100% 20% 20%;
-    /* border-width: 4px 4px 0px 4px; */
-    /* border-style: solid; */
-    /* border-color: var(--outline-color); */
     z-index: 100;
 }
 
