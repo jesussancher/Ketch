@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import './styles.css';
 
-export default function CandaceFlynn () {
+export default function Bellota () {
     return(
         <Fragment>
             <div className={'bellota-background'}>

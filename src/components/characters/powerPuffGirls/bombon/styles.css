@@ -1,0 +1,404 @@
+
+:root {
+    --bombon-color: #f262a8;
+    --bombon-hair-color: #f66718;
+    --bombon-skin-color: #f4cfb4;
+    --bombom-hair-decor-color: #f13a1b;
+    --bombon-complementary-color: #ffffff;
+    --bombon-outline-color: #010204;
+    --bombon-background-color: #fff;
+}
+
+.bombon-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bombon-head {
+    position: fixed;
+    height: 165px;
+    width: 193px;
+    border-radius: 50%;
+    border-top: 4px solid var(--bombon-outline-color);
+    background-color: var(--bombon-skin-color);
+    z-index: 100;
+}
+
+.bombon-head-outline {
+    position: fixed;
+    overflow: hidden;
+    height: 165px;
+    width: 193px;
+    border-radius: 50%;
+    border: 4px solid var(--bombon-outline-color);
+    z-index: 120;
+}
+
+
+.bombon-hair-decoration {
+    position: relative;
+    left: calc(50% - 15px);
+    bottom: 20px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 4px solid var(--bombon-outline-color);
+    background-color: var(--bombom-hair-decor-color);
+    z-index: 90;
+}
+
+.bombon-hair-decor {
+    position: relative;
+    left: calc(50% - 15px);
+    bottom: 47px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 4px solid var(--bombon-outline-color);
+    background-color: var(--bombom-hair-decor-color);
+    z-index: 80;
+}
+
+.bombon-hair-decor::before {
+    position: absolute;
+    content: "";
+    left: 15px;
+    bottom: -10px;
+    height: 110px;
+    width: 50px;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 70%;
+    border-bottom-right-radius: 30%;
+    border: 4px solid var(--bombon-outline-color);
+    background-color: var(--bombom-hair-decor-color);
+    transform: rotate(15deg);
+}
+
+.bombon-hair-decor::after {
+    position: absolute;
+    content: "";
+    right: 15px;
+    bottom: -10px;
+    height: 110px;
+    width: 50px;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 70%;
+    border-bottom-left-radius: 30%;
+    border: 4px solid var(--bombon-outline-color);
+    background-color: var(--bombom-hair-decor-color);
+    transform: rotate(-15deg);
+}
+
+.bombon-hair-top {
+    position: relative;
+    overflow: hidden;
+    height: 53px;
+    width: 100%;
+    background-color: var(--bombon-hair-color);
+    z-index: 120;
+}
+
+.bombon-hair-top-cut.left {
+    position: absolute;
+    left: 38px;
+    bottom: -5px;
+    height: 25px;
+    width: 10px;
+    border-top-left-radius: 100%;
+    background: linear-gradient(-45deg, var(--bombon-outline-color) 40%, var(--bombon-color) 40%, var(--bombon-color) 100%);
+    z-index: 130;
+    transform: rotate(15deg);
+}
+
+.bombon-hair-top-cut.right {
+    position: absolute;
+    right: 46px;
+    bottom: -5px;
+    height: 25px;
+    width: 10px;
+    border-top-right-radius: 100%;
+    background: linear-gradient(45deg, var(--bombon-outline-color) 40%, var(--bombon-color) 40%, var(--bombon-color) 100%);
+    z-index: 130;
+    transform: rotate(-15deg);
+}
+
+.bombon-hair-top::before {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    bottom: -5px;
+    left: 94px;
+    height: 26px;
+    width: 7px;
+    border-top-right-radius: 100%;
+    background-color: var(--bombon-skin-color);
+}
+
+.bombon-hair-top::after {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    bottom: -5px;
+    left: 87px;
+    height: 26px;
+    width: 7px;
+    border-top-left-radius: 100%;
+    background-color: var(--bombon-skin-color);
+}
+
+.bombon-eye {
+    position: relative;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid var(--bombon-outline-color);
+    background-color: var(--bombon-background-color);
+    z-index: 110;
+}
+
+.bombon-eye.left {
+    left: -25px;
+    top: -30px;
+}
+
+.bombon-eye.right {
+    left: 105px;
+    top: -135px;
+}
+
+.bombon-iris {
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--bombon-color);
+}
+
+.bombon-iris.left {
+    right: -15px;
+}
+
+.bombon-iris.right {
+    left: -15px;
+}
+
+.bombon-pupil {
+    position: absolute;
+    top: 15px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--bombon-outline-color);
+}
+
+.bombon-pupil.left {
+    right: -17px;
+}
+
+.bombon-pupil.right {
+    left: -17px;
+}
+
+.bombon-pupil-light {
+    position: absolute;
+    top: 35px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--bombon-background-color);
+}
+
+.bombon-pupil-light.left {
+    right: 5px;
+}
+
+.bombon-pupil-light.right {
+    left: 5px;
+}
+
+.bombon-mouth {
+    position: absolute;
+    top: 110px;
+    left: 83px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-bottom: 3px solid var(--bombon-outline-color);
+}
+
+.bombon-hair-back {
+    position: relative;
+    top: 90px;
+    left: -55px;
+    width: 110px;
+    height: 100px;
+    background-color: var(--bombon-hair-color);
+    z-index: 40;
+}
+
+.bombon-hair-back-fleco {
+    position: relative;
+    bottom: -50px;
+    left: -34px;
+    width: 180px;
+    height: 80px;
+    border-bottom-right-radius: 70%;
+    border-bottom-left-radius: 70%;
+    background-color: var(--bombon-hair-color);
+    z-index: 40;
+}
+
+.bombon-hair-back-fleco::before {
+    position: absolute;
+    content: "";
+    bottom: 40px;
+    left: -10px;
+    width: 50px;
+    height: 80px;
+    border-bottom-right-radius: 70%;
+    background-color: var(--main-background-day);
+    transform: rotate(-12deg);
+}
+
+.bombon-hair-back-fleco::after {
+    position: absolute;
+    content: "";
+    bottom: 40px;
+    right: -10px;
+    width: 52px;
+    height: 80px;
+    border-bottom-left-radius: 70%;
+    background-color: var(--main-background-day);
+    transform: rotate(12deg);
+}
+
+
+.bombon-body {
+    position: relative;
+    overflow: hidden;
+    top: 90px;
+    left: 82px;
+    width: 55px;
+    height: 90px;
+    background-color: var(--bombon-color);
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    z-index: 50;
+}
+
+.bombon-body-outline {
+    position: relative;
+    top: 90px;
+    right: -27px;
+    width: 55px;
+    height: 90px;
+    border-bottom: 4px solid var(--bombon-outline-color);
+    z-index: 60;
+}
+
+.bombon-body-outline::after {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    content: "";
+    width: 4px;
+    height: 100px;
+    background-color: var(--bombon-outline-color);
+    transform: rotate(4deg);
+}
+
+.bombon-body-outline::before {
+    position: absolute;
+    right: 0;
+    bottom: -4px;
+    content: "";
+    width: 4px;
+    height: 100px;
+    background-color: var(--bombon-outline-color);
+    transform: rotate(-4deg);
+}
+
+
+.bombon-body-decor {
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    height: 20px;
+    background-color: var(--bombon-outline-color);
+}
+
+.bombon-right-foot {
+    position: relative;
+    overflow: hidden;
+    bottom: 15px;
+    right: -27px;
+    width: 27px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid var(--bombon-outline-color);
+    background-color: var(--bombon-background-color);
+    z-index: 100;
+}
+
+.bombon-right-foot::after, .bombon-left-foot::after {
+    position: absolute;
+    content: "";
+    bottom: -15px;
+    right: 0px;
+    width: 38px;
+    height: 42px;
+    background-color: var(--bombon-outline-color);
+    z-index: 50;
+}
+
+.bombon-right-foot::before, .bombon-left-foot::before {
+    position: absolute;
+    content: "";
+    bottom: 10px;
+    right: 6px;
+    width: 15px;
+    height: 10px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: var(--bombon-background-color);
+    z-index: 60;
+}
+
+.bombon-left-foot {
+    position: relative;
+    overflow: hidden;
+    bottom: 54px;
+    left: -3px;
+    width: 27px;
+    height: 50px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: 4px solid var(--bombon-outline-color);
+    background-color: var(--bombon-background-color);
+    z-index: 90;
+}
+
+
+.bombon-arm {
+    position: relative;
+    overflow: hidden;
+    width: 27px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid var(--bombon-outline-color);
+    background-color: var(--bombon-skin-color);
+    z-index: 100;
+}
+.bombon-arm.left {
+    bottom: -15px;
+    left: -80px;
+}
+
+.bombon-arm.right {
+    bottom: 190px;
+    right: -110px;
+}
